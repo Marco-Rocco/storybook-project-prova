@@ -15,6 +15,7 @@ assoluta al pixel, come per bordi sottili o elementi grafici che non devono scal
  */
 
 import type { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 
 const meta: Meta = {
     title: 'Spacing',
@@ -27,5 +28,14 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {
-    render: () => <div>Spacing</div>
+    render: () => <>
+        <dl>
+            {['zero', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'].map((key) => (
+                <React.Fragment key={key}>
+                    <dt>{key}</dt>
+                    <dd>{`var(--spacing-${key})`}</dd>
+                </React.Fragment>
+            ))}
+        </dl>
+    </>
 }
