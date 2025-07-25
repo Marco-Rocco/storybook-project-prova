@@ -54,6 +54,13 @@ const Style: React.FC = () => {
         padding: 0.5rem;
         border-bottom: 1px solid #ccc;
         }
+
+        .info{
+        background-color: magenta;
+        height: 1ch;
+        width: var(--story-spacing);
+        display: inline-block;
+        }
         `}</style>
 }
 
@@ -66,7 +73,10 @@ export const Default: Story = {
             {['zero', 'xs', 'sm', 'md', 'lg', 'xl'].map((key) => (
                 <React.Fragment key={key}>
                     <dt>{key}</dt>
-                    <dd> <SpaceCalc value={`--spacing-${key}`} /> </dd>
+                    <dd style={{ '--story-spacing': `var(--spacing-${key})` }}>
+                        <span><SpaceCalc value={`--spacing-${key}`} /></span>
+                        <span className="info"></span>
+                    </dd>
                 </React.Fragment>
             ))}
         </dl>
