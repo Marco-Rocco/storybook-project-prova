@@ -53,6 +53,11 @@ const Style: React.FC = () => {
         dd{
         padding: 0.5rem;
         border-bottom: 1px solid #ccc;
+        grid-template-columns: subgrid;
+        display: grid;
+        align-items: center;
+        gap: 1ch;
+        grid-column: 2/4;
         }
 
         .info{
