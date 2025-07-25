@@ -33,12 +33,25 @@ const SpaceCalc = ({ value }: { value: string }) => {
     return <span>{spacing}</span>
 }
 
+const Style: React.FC = () => {
+    return <style>{`
+        dl{
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        display: grid;
+        max-width: (550rem/16);
+        grid-template-columns: 1fr 1fr;
+        }
+        `}</style>
+}
+
 export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     render: () => <>
+        <Style />
         <dl>
-            {['zero', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'].map((key) => (
+            {['zero', 'xs', 'sm', 'md', 'lg', 'xl'].map((key) => (
                 <React.Fragment key={key}>
                     <dt>{key}</dt>
                     <dd> <SpaceCalc value={`--spacing-${key}`} /> </dd>
