@@ -41,6 +41,18 @@ const Style: React.FC = () => {
         display: grid;
         max-width: (550rem/16);
         grid-template-columns: 1fr 1fr;
+        border-radius: 0.5rem;
+        }
+
+        dt{
+        font-weight: 600;
+        padding: 0.5rem;
+        border-bottom: 1px solid #ccc;
+        }
+
+        dd{
+        padding: 0.5rem;
+        border-bottom: 1px solid #ccc;
         }
         `}</style>
 }
