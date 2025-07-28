@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta = {
-    title: 'Typography',
+    title: 'Atoms/Typography',
     parameters: {
         layout: 'centered',
     },
