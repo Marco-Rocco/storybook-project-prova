@@ -1,7 +1,15 @@
 import React from "react";
-
 import "../styles/Badge.css";
 
-export const Badge: React.FC = () => {
-    return <div className="badge">Badge</div>;
+type BadgeProps = {
+    children: React.ReactNode;
+    variant?: "neutral" | "positive" | "negative";
+} & React.HTMLAttributes<HTMLDivElement>;
+
+export const Badge: React.FC<BadgeProps> = ({
+    children,
+    variant = "neutral",
+    ...attrs
+}) => {
+    return <div className={`badge ${variant}`} {...attrs}>{children}</div>;
 }
