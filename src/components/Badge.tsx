@@ -1,5 +1,7 @@
 import React from "react";
-import "../styles/Badge.css";
+import root from "react-shadow";
+import cssText from "../styles/Badge.css?inline";
+import { GlobalStyles } from "../styles/GlobalStyles";
 
 type BadgeProps = {
     children: React.ReactNode;
@@ -11,5 +13,13 @@ export const Badge: React.FC<BadgeProps> = ({
     variant = "neutral",
     ...attrs
 }) => {
-    return <div className={`badge ${variant}`} {...attrs}>{children}</div>;
+    return (
+        <root.span>
+            <GlobalStyles />
+            <style>{cssText}</style>
+            <span className={`badge ${variant}`} {...attrs}>
+                {children}
+            </span>
+        </root.span>
+    );
 }

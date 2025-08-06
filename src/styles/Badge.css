@@ -7,10 +7,10 @@
     font-weight: 800;
 
     &:is(.positive) {
-        background-color: light-dark(var(--color-green-3), var(--color-green-10));
+        background-color: light-dark(var(--color-green-2), var(--color-green-10));
     }
 
     &:is(.negative) {
-        background-color: light-dark(var(--color-red-3), var(--color-red-10));
+        background-color: light-dark(var(--color-red-2), var(--color-red-10));
     }
 }
