@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Tabs } from "../components/Tabs";
 import root from "react-shadow";
 import { Badge } from "../components/Badge";

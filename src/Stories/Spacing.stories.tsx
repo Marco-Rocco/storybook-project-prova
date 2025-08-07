@@ -14,7 +14,7 @@ assoluta al pixel, come per bordi sottili o elementi grafici che non devono scal
 
  */
 
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
 
 const meta: Meta = {
